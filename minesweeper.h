@@ -8,6 +8,7 @@
 #include <iterator>
 #include <algorithm>
 #include <cmath>
+//#define __DEBUG__ true
 using namespace std;
 enum ECellState
 {

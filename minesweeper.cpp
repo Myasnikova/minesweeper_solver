@@ -153,11 +153,15 @@ void Group::print()
 MineSweeper::MineSweeper(const vector<vector<int>>& matrix, int max_bomb) :matrix(matrix), max_bomb(max_bomb)
 {
 	init();
-	//cout << "after_init:";
-	//print_groups();
-	//cout << "after_unite:";
+#ifdef __DEBUG__
+	cout << "after_init:";
+	print_groups();
+	cout << "after_unite:";
+#endif
 	unite_all_equal_groups();
-	//print_groups();
+#ifdef __DEBUG__
+	print_groups();
+#endif
 	
 }
 
@@ -449,18 +453,26 @@ bool MineSweeper::getSolution(pair<int, int>& res)
 			repeat = true;
 			unite_all_equal_groups();
 		}
-		//cout << "after_substract:";
-		//print_groups();
+#ifdef __DEBUG__
+		cout << endl << "after_substract:";
+		print_groups();
+#endif
 		if (intersect())
 		{
 			repeat = true;
 			unite_all_equal_groups();
 		}
 		//i++;
-		//print_groups();
+#ifdef __DEBUG__
+		cout << endl << "after_intersect:";
+		print_groups();
+#endif
 	} while (repeat);
 	//cout << endl;
-	//print_groups();
+#ifdef __DEBUG__
+	cout << endl << "end_matrix:";
+	print_groups();
+#endif
 	if (resolved)
 	{
 		cout << "result: row: " << res.first << " column: " << res.second;

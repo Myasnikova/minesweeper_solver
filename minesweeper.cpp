@@ -463,12 +463,12 @@ bool MineSweeper::getSolution(pair<int, int>& res)
 	//print_groups();
 	if (resolved)
 	{
-		cout << "result: row: " << res.second << " column: " << res.first;
+		cout << "result: row: " << res.first << " column: " << res.second;
 		return true;
 	}
 	if (getProbablisticSolution(res))
 	{
-		cout << "result: row: " << res.second << " column: " << res.first;
+		cout << "result: row: " << res.first << " column: " << res.second;
 		return true;
 	}
 	cout << "I don't have solution :(";

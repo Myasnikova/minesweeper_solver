@@ -11,7 +11,7 @@ int main()
 								{ 1, 2, 2,-1,-1,-1},
 								{-1,-1,-1,-1,-1,-1},
 								{-1,-1,-1,-1,-1,-1}};*/
-	int max_bomb = 0;
+	/*int max_bomb = 0;
 	vector<vector<int>> matrix{ { 0, 0, 0, 1,-1,-1,-1,-1,-1},
 								{ 0, 0, 0, 1,-1,-1,-1,-1,-1},
 								{ 0, 1, 1, 2, 1,-1,-1,-1,-1},
@@ -20,8 +20,8 @@ int main()
 								{ 0, 0, 0, 1, 1, 3,-1, 2, 0},
 								{ 1, 1, 1, 0, 0, 1, 1, 1, 0},
 								{-1,-1, 2, 1, 0, 0, 0, 0, 0},
-								{-1,-1,-1, 1, 0, 0, 0, 0, 0}};
-	/*int h, w;
+								{-1,-1,-1, 1, 0, 0, 0, 0, 0}};*/
+	int h, w;
 	cin >> w >> h;
 	int max_bomb = 0;
 	cin >> max_bomb;
@@ -37,7 +37,7 @@ int main()
 			line.push_back(c == 'X' ? -1 : int(c - '0'));
 		}
 		matrix.push_back(line);
-	}*/
+	}
 
 	MineSweeper ms(matrix, max_bomb);
 	pair<int, int> res;
